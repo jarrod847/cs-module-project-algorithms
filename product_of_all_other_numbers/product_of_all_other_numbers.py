@@ -9,7 +9,10 @@ import math
 def product_of_all_other_numbers(arr):
     product = []
     for i in arr:
-        product.append(int(math.prod(arr) / i))
+        if i == 0:
+            continue
+        else:
+            product.append(int(math.prod(arr) / i))
     return product
 
 
